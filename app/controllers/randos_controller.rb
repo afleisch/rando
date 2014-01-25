@@ -1,0 +1,12 @@
+class RandosController < ApplicationController
+
+
+
+
+
+
+
+
+
+
+end

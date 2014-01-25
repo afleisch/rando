@@ -1,3 +1,3 @@
 Rando::Application.routes.draw do
-  root to: 'randos#index'
+  root to: 'urls#index'
 end

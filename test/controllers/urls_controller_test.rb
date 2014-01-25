@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RandosControllerTest < ActionController::TestCase
+class UrlsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

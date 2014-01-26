@@ -15,8 +15,14 @@ class UrlsController < ApplicationController
 	new_url= params.require(:url).permit(:link)
 	url = Url.create(new_url) do |u|
 		u.random_string = @random_string
-	redirect_to "/urls"
-end
-end
+   end
+   redirect_to "/urls/#{url.id}"
+ end
+
+ def show
+	id = params[:id]
+	@url = Url.find(id)
+	render :show
+ end
 
 end

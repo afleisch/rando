@@ -32,4 +32,11 @@ def redirect
 
 end
 
+def preview
+	id = params[:id]
+	url = Url.find(id)
+	@random_string = url.random_string
+	@random_url = url.link
+	render :preview
+ end
 end

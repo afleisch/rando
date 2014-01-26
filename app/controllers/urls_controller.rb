@@ -13,11 +13,15 @@ class UrlsController < ApplicationController
  def create
  	@random_string = SecureRandom.urlsafe_base64(7)
 	new_url= params.require(:url).permit(:link)
+	if params[:url][:link].include?("http://")
 	url = Url.create(new_url) do |u|
 		u.random_string = @random_string
-   end
-   redirect_to "/urls/#{url.id}"
- end
+    end
+    redirect_to "/urls/#{url.id}"
+	else
+	render :error    
+    end
+	end
 
  def show
 	id = params[:id]

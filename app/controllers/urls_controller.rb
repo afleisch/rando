@@ -22,6 +22,7 @@ class UrlsController < ApplicationController
  def show
 	id = params[:id]
 	@url = Url.find(id)
+	@random_string = @url.random_string
 	render :show
  end
 

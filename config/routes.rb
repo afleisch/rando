@@ -5,6 +5,8 @@ Rando::Application.routes.draw do
 
   get '/urls/new', to: 'urls#new'
 
+  post 'urls/new', to: 'urls#new'
+
   get '/urls/:id', to: 'urls#show'
 
   post '/urls', to: 'urls#create'

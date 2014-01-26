@@ -9,10 +9,11 @@
       <th>Random String</th>
       <th>Created At</th>
       <th>Updated At</th>
+      <th>Preview</th>
     </tr>
   <% @urls.each do |url| %>
         <tr>
-        	<td><%= url[:id] %></td>
+        	  <td><%= url[:id] %></td>
             <td><%= url[:link] %></td>
             <td><%= url[:random_string] %></td>
           	<td><%=url[:created_at] %></td>

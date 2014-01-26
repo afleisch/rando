@@ -40,4 +40,12 @@ def preview
 	@random_url = url.link
 	render :preview
  end
+
+ def delete
+ 	id = params[:id]
+ 	@url = Url.find(id)
+ 	@link = @url[:link]
+ 	@url.destroy
+ 	render :delete
+ end
 end

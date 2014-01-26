@@ -17,5 +17,7 @@ Rando::Application.routes.draw do
 
   get '/urls/:id/preview', to: 'urls#preview'
 
+  post '/urls/:id/destroy', to: 'urls#delete'
+
 
 end

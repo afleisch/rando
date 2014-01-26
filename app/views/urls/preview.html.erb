@@ -1,6 +1,7 @@
-<h1>The random url for <%="#{@random_url}"%> is:</h1>
+<div class="container">
+<h2>The random url for <%="#{@random_url}"%> is:</h2>
 
-<h2> <%= link_to "localhost:3000/urls/go/#{@random_string}", @random_url %></h2>
+<h3> <%= link_to "localhost:3000/urls/go/#{@random_string}", @random_url %></h3>
 
 
 
@@ -8,4 +9,6 @@
 
 
 <%= render partial: "form_return" %>
+
+</div>
 

@@ -25,5 +25,11 @@ class UrlsController < ApplicationController
 	render :show
  end
 
+def redirect
+	random_string = params[:random_string]
+	url = Url.find_by random_string: random_string
+	redirect_to url.link, status: 301
+
+end
 
 end

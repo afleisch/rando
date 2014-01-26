@@ -18,7 +18,8 @@
             <td><%= url[:random_string] %></td>
           	<td><%=url[:created_at] %></td>
           	<td><%=url[:updated_at] %></td>
-            <td>  <%= button_to "Preview", {controller: :urls, action: :preview, id: url[:id]}, :method => :get %></td>
+            <td><%= button_to "Preview", {controller: :urls, action: :preview, id: url[:id]}, :method => :get %></td>
+            <td><%= button_to "Delete", {controller: :urls, action: :delete, id: url[:id]}, :method => :post %></td> 
         </tr>
     <% end %>
  </table>

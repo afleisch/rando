@@ -1,8 +1,9 @@
 <h1>Create a new URL </h1>
+<p>Please enter the link for which you would like a Rando url, starting with <em>'http://'</em></p>
 
 <%= form_for @url do |s| %>
 	<%= s.text_field :link, placeholder: "link" %> <br>
 	
-	<%= s.submit %>
+	<%= s.submit %> <br>
 
 <% end %>

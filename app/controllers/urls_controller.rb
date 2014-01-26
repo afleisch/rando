@@ -25,4 +25,10 @@ class UrlsController < ApplicationController
 	render :show
  end
 
+ def edit
+	id = params[:id]
+	@url = Url.find(id)
+	render :edit	
+ end
+
 end
